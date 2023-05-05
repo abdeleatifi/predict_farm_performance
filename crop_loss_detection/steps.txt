@@ -1,0 +1,10 @@
+1- satellite images (date range) --> 
+1-2- ndvi map images 
+2- ndvi timeserie values + crop type + ...  and the taget value (that is weither the crop survived a given percentage of loss)
+3- train the model and test it
+4- deploye the model
+
+
+step 1:
+code to fetch the satellite images from google earth engine.
+without downloading the images, generate the ndvi map from them
