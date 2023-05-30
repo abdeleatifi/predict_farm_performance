@@ -4,7 +4,6 @@ def ras_to_vec(state, county, year):
     
     state = str(state)
     year = str(year)
-    county = county.capitalize()
 
     if len(state) == 1:
         state = '0'+state
@@ -35,7 +34,8 @@ def ras_to_vec(state, county, year):
         scale=30,
         geometryType='polygon',
         eightConnected=False,
-        labelProperty='class'
+        labelProperty='class',
+        maxPixels= 1e9
     )
 
     return countyBoundary, winterWheatFC
