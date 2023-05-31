@@ -2,12 +2,13 @@ import pandas as pd
 from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 
-# the df must be full of just ndvi values, 
-# step 1: slice it before feed it to this function
 def ndvi_data_pre(df):
 
+    # Step 1: Slice the last 27 columns
+    ndviserie_sliced = df.iloc[:, -27:]
+
     # Step 2: Check for empty rows and drop them
-    ndviserie_clean = df.dropna(how='all')
+    ndviserie_clean = ndviserie_sliced.dropna(how='all')
 
     # Step 3: Perform machine learning-based imputation
     imputer = IterativeImputer()

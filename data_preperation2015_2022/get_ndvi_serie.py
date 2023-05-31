@@ -3,13 +3,13 @@ from retrieve_mean_ndvi import retrieve_mean_ndvi
 import datetime
 import ee
 
-def get_ndvi_serie(df):
+try:
+    ee.Initialize()
+except:
+    ee.Authenticate()
+    ee.Initialize()
 
-    try:
-        ee.Initialize()
-    except:
-        ee.Authenticate()
-        ee.Initialize()
+def get_ndvi_serie(df):
 
     df = df.copy()
 
@@ -29,6 +29,5 @@ def get_ndvi_serie(df):
 
         start_date = end_date + datetime.timedelta(days=1)
     
-    ee.Reset()
     
     return df

@@ -10,8 +10,8 @@ def ras_to_vec(state, county, year):
 
     # Define the boundary of Thomas County, Kansas
     countyBoundary = ee.FeatureCollection('TIGER/2018/Counties') \
-        .filter(ee.Filter.eq('STATEFP', state)) \
-        .filter(ee.Filter.eq('NAME', county))
+        .filter(ee.Filter.eq("STATEFP", state)) \
+        .filter(ee.Filter.eq("NAME", county))
 
     start = year+'-01-01'
     end = year+'-12-31'

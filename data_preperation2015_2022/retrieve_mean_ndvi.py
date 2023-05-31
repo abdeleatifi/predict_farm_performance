@@ -25,7 +25,7 @@ def retrieve_mean_ndvi(start_date, end_date, countyBoundary, winterWheatFC):
             reducer=ee.Reducer.mean(),
             geometry=winterWheatFC,
             bestEffort=True,
-            scale=10
+            scale=30
         ).getInfo().get('nd')
         
     elif landsat8.size().getInfo():
@@ -40,7 +40,7 @@ def retrieve_mean_ndvi(start_date, end_date, countyBoundary, winterWheatFC):
             reducer=ee.Reducer.mean(),
             geometry=winterWheatFC,
             bestEffort=True,
-            scale=50
+            scale=30
         ).getInfo().get('nd')
 
     else:
