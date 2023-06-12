@@ -1,0 +1,271 @@
+Drop Null values/ 0.2 of test  / Without scaling:
+
+- Linear Regression : RMSE: 0.1813; R-squared: 0.1913; std: 
+- Random Forest :     RMSE: 0.1377; R-squared: 0.5337
+- Gradient Boosting : RMSE: 0.1551; R-squared: 0.4078
+- SVR :               RMSE: 0.2010; R-squared: 0.0055
+- xgb :               RMSE: 0.1446; R-squared: 0.4857
+
+************************************************************************************
+
+Drop Null values / 0.2 of test  / With MinMax scaling:
+
+- Linear Regression : RMSE: 0.1813; R-squared: 0.1913
+- Random Forest :     RMSE: 0.1389; R-squared: 0.5251
+- Gradient Boosting : RMSE: 0.1551; R-squared: 0.4083
+- SVR :               RMSE: 0.1404; R-squared: 0.5148
+- xgb :               RMSE: 0.1447; R-squared: 0.4850
+
+**************************************************************************************************
+
+Drop Null values / 0.2 of test  / With Standize scaling: (hadi a7ssan L7d sa3a: Random Forest)
+
+Linear Regression : RMSE: 0.1813; R-squared: 0.1913
+Random Forest :     RMSE: 0.1376; R-squared: 0.5342
+Gradient Boosting : RMSE: 0.1549; R-squared: 0.4096
+SVR :               RMSE: 0.1403; R-squared: 0.5153
+xgb :               RMSE: 0.1446; R-squared: 0.4856
+
+**************************************************************************************
+
+Fill Null values with 0 / 0.2 of test  / Without scaling:
+
+Linear Regression : RMSE: 0.1932; R-squared: 0.1749
+Random Forest : RMSE: 0.1571; R-squared: 0.4543
+Gradient Boosting : RMSE: 0.1749; R-squared: 0.3239
+SVR : RMSE: 0.2153; R-squared: -0.0247
+xgb : RMSE: 0.1600; R-squared: 0.4344
+
+*********************************************************************************************
+
+Fill Null values with 0 / 0.2 of test  / With MinMax scaling:
+
+Model: Linear Regression
+MSE: 0.0373
+RMSE: 0.1932
+R-squared: 0.1749
+-------------------------------------
+Model: Random Forest
+MSE: 0.0249
+RMSE: 0.1579
+R-squared: 0.4494
+-------------------------------------
+Model: Gradient Boosting
+MSE: 0.0306
+RMSE: 0.1748
+R-squared: 0.3248
+-------------------------------------
+Model: SVR
+MSE: 0.0234
+RMSE: 0.1529
+R-squared: 0.4835
+-------------------------------------
+Model: xgb
+MSE: 0.0256
+RMSE: 0.1600
+R-squared: 0.4344
+
+****************************************************************************************************
+
+Fill Null values with 0 / 0.2 of test  / With Standerdize scaling:
+
+Model: Linear Regression
+MSE: 0.0373
+RMSE: 0.1932
+R-squared: 0.1749
+-------------------------------------
+Model: Random Forest
+MSE: 0.0250
+RMSE: 0.1583
+R-squared: 0.4465
+-------------------------------------
+Model: Gradient Boosting
+MSE: 0.0306
+RMSE: 0.1749
+R-squared: 0.3241
+-------------------------------------
+Model: SVR
+MSE: 0.0233
+RMSE: 0.1526
+R-squared: 0.4852
+-------------------------------------
+Model: xgb
+MSE: 0.0256
+RMSE: 0.1600
+R-squared: 0.4343
+
+************************************************************************************************************
+
+Fill Null values with Mean / 0.2 of test  / Without scaling:
+
+Model: Linear Regression
+MSE: 0.0374
+RMSE: 0.1934
+R-squared: 0.1734
+-------------------------------------
+Model: Random Forest
+MSE: 0.0254
+RMSE: 0.1595
+R-squared: 0.4381
+-------------------------------------
+Model: Gradient Boosting
+MSE: 0.0300
+RMSE: 0.1732
+R-squared: 0.3371
+-------------------------------------
+Model: SVR
+MSE: 0.0464
+RMSE: 0.2154
+R-squared: -0.0249
+-------------------------------------
+Model: xgb
+MSE: 0.0272
+RMSE: 0.1650
+R-squared: 0.3981
+
+*************************************************************************************************************
+
+Fill Null values with Mean / 0.2 of test  / With MinMax scaling:
+
+Model: Linear Regression
+MSE: 0.0374
+RMSE: 0.1934
+R-squared: 0.1734
+-------------------------------------
+Model: Random Forest
+MSE: 0.0255
+RMSE: 0.1595
+R-squared: 0.4375
+-------------------------------------
+Model: Gradient Boosting
+MSE: 0.0300
+RMSE: 0.1732
+R-squared: 0.3370
+-------------------------------------
+Model: SVR
+MSE: 0.0239
+RMSE: 0.1545
+R-squared: 0.4728
+-------------------------------------
+Model: xgb
+MSE: 0.0272
+RMSE: 0.1650
+R-squared: 0.3981
+
+******************************************************************************************************
+
+Fill Null values with Mean / 0.2 of test  / With Standerdize scaling:
+
+Model: Linear Regression
+MSE: 0.0374
+RMSE: 0.1934
+R-squared: 0.1734
+-------------------------------------
+Model: Random Forest
+MSE: 0.0256
+RMSE: 0.1600
+R-squared: 0.4345
+-------------------------------------
+Model: Gradient Boosting
+MSE: 0.0300
+RMSE: 0.1731
+R-squared: 0.3376
+-------------------------------------
+Model: SVR
+MSE: 0.0236
+RMSE: 0.1536
+R-squared: 0.4785
+-------------------------------------
+Model: xgb
+MSE: 0.0272
+RMSE: 0.1650
+R-squared: 0.3981
+
+************************************************************************************************
+
+Fill Null values with Machine Learning / 0.2 of test  / Without scaling:
+
+Model: Linear Regression
+MSE: 0.0373
+RMSE: 0.1932
+R-squared: 0.1749
+-------------------------------------
+Model: Random Forest
+MSE: 0.0254
+RMSE: 0.1594
+R-squared: 0.4384
+-------------------------------------
+Model: Gradient Boosting
+MSE: 0.0302
+RMSE: 0.1737
+R-squared: 0.3330
+-------------------------------------
+Model: SVR
+MSE: 0.0464
+RMSE: 0.2154
+R-squared: -0.0248
+-------------------------------------
+Model: xgb
+MSE: 0.0265
+RMSE: 0.1627
+R-squared: 0.4152
+
+*************************************************************************************************
+
+Fill Null values with Machine Learning / 0.2 of test  / With MinMax scaling:
+
+Model: Linear Regression
+MSE: 0.0373
+RMSE: 0.1932
+R-squared: 0.1749
+-------------------------------------
+Model: Random Forest
+MSE: 0.0255
+RMSE: 0.1596
+R-squared: 0.4375
+-------------------------------------
+Model: Gradient Boosting
+MSE: 0.0302
+RMSE: 0.1737
+R-squared: 0.3332
+-------------------------------------
+Model: SVR
+MSE: 0.0239
+RMSE: 0.1546
+R-squared: 0.4720
+-------------------------------------
+Model: xgb
+MSE: 0.0265
+RMSE: 0.1627
+R-squared: 0.4152
+
+*********************************************************************************************************
+
+Fill Null values with Machine Learning / 0.2 of test  / With Standerdize scaling:
+
+Model: Linear Regression
+MSE: 0.0373
+RMSE: 0.1932
+R-squared: 0.1749
+-------------------------------------
+Model: Random Forest
+MSE: 0.0255
+RMSE: 0.1597
+R-squared: 0.4363
+-------------------------------------
+Model: Gradient Boosting
+MSE: 0.0302
+RMSE: 0.1738
+R-squared: 0.3324
+-------------------------------------
+Model: SVR
+MSE: 0.0235
+RMSE: 0.1534
+R-squared: 0.4798
+-------------------------------------
+Model: xgb
+MSE: 0.0265
+RMSE: 0.1627
+R-squared: 0.4152
+
+************************************************************************************************************
