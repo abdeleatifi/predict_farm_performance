@@ -1,7 +1,7 @@
 import joblib
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-from get_land_area import *
+from get_land_use_area import *
 import datetime
 import ee
 
@@ -12,25 +12,23 @@ except:
     ee.Authenticate()
     ee.Initialize()
     
-def get_loss_perc(crop_geometry, start_date, end_date):
+def get_crop_health(crop_geometry, start_date, end_date):
 
     ndvi_serie = get_ndvi_serie(crop_geometry, start_date, end_date)
 
-    land_area = get_land_area(crop_geometry)
-
-    new_data = [land_area] + ndvi_serie
+    #land_area = get_land_area(crop_geometry)
 
     loaded_scaler = joblib.load('best_scaler.pkl')
 
-    new_data_scaled = loaded_scaler.transform(np.array(new_data).reshape(1, 28))
+    new_data_scaled = loaded_scaler.transform(np.array(ndvi_serie).reshape(1, len(ndvi_serie)))
 
     # Load the model from memory
     loaded_model = joblib.load('best_model.pkl')
 
     # Use the loaded model for predictions
-    Loss_perc = loaded_model.predict(new_data_scaled)
+    crop_health = loaded_model.predict(new_data_scaled)
 
-    return Loss_perc
+    return crop_health
 
 
 

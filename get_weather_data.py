@@ -1,24 +1,15 @@
-import datetime
 from meteostat import Daily, Stations
-from get_ndvi_data import ras_to_vec
 import ee
 
-def get_meteostat_data(df):
-
-    df = df.copy()
-
-    start_date = datetime.datetime.strptime(df['Planting_Dates']+'-'+str(df['Year']-1), '%d-%b-%Y')
-    har_date = datetime.datetime.strptime(df['Harvesting_Dates']+'-'+str(df['Year']), '%d-%b-%Y')
-
-    countyBoundary, crop_geometry = ras_to_vec(df['State_ANSI'], df['County_ANSI'], start_date, har_date)
+def get_meteostat_data(crop_geometry, start_date, har_date):
     
     if not(crop_geometry.size().getInfo()):
-        df.loc['gdd'] = None
-        df.loc['ehdd'] = None
-        df.loc['ecdd'] = None
-        return df
+        weather_data = {'gdd' : None,
+                    'ehdd' : None,
+                    'ecdd' : None}
+        return weather_data
     
-    geometries = countyBoundary.geometry().geometries().getInfo()
+    geometries = crop_geometry.geometry().geometries().getInfo()
     longitude, latitude = ee.Geometry(geometries[0]).centroid().getInfo()['coordinates']
     
     stations = Stations()
@@ -42,9 +33,8 @@ def get_meteostat_data(df):
 
     ecdd = sum([max(T_base - temperature, 0) for temperature in temperatures]) # (in degrees Celsius)
 
+    weather_data = {'gdd' : gdd,
+                    'ehdd' : ehdd,
+                    'ecdd' : ecdd}
 
-    df.loc['gdd'] = gdd # (in degrees Celsius)
-    df.loc['ehdd'] = ehdd # (in degrees Celsius)
-    df.loc['ecdd'] = ecdd # (in degrees Celsius)
-
-    return df
+    return weather_data # (in degrees Celsius)
