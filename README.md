@@ -1,2 +1,2 @@
-# farmer_credit_scoring
+# Multimodal Approach : Predicting Farm Performance Using Machine Learning and Remote Sensing
  
