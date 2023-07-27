@@ -1,6 +1,7 @@
 from meteostat import Daily, Stations
 import ee
 
+# get weather data for a new datapoint
 def get_meteostat_data(crop_geometry, start_date, har_date):
     
     if not(crop_geometry.size().getInfo()):

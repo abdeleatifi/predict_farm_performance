@@ -11,7 +11,9 @@ try:
 except:
     ee.Authenticate()
     ee.Initialize()
-    
+
+
+# get the health of crop_geometry parcel using a pretrained model
 def get_crop_health(crop_geometry, start_date, end_date):
 
     ndvi_serie = get_ndvi_serie(crop_geometry, start_date, end_date)
@@ -31,7 +33,7 @@ def get_crop_health(crop_geometry, start_date, end_date):
     return crop_health
 
 
-
+# get the timeseries ndvi values of the crop_geometry parcel
 def get_ndvi_serie(crop_geometry, start_date, end_date):
 
     start_date = datetime.datetime.strptime(start_date, '%Y-%m-%d')
@@ -52,7 +54,7 @@ def get_ndvi_serie(crop_geometry, start_date, end_date):
     
     return ndvi_serie
 
-
+# get the satellite image from start_date to end_date trasform it to ndvi map then calculate the mean ndvi value of the image
 def get_mean_ndvi(crop_geometry, start_date, end_date): 
     
     if not(crop_geometry.size().getInfo()):

@@ -2,6 +2,7 @@ import datetime
 import ee
 
 
+# get the entire timeseries NDVI values from the planting till the harvesting date
 def get_ndvi_serie(df):
 
     df = df.copy()
@@ -97,6 +98,7 @@ def retrieve_mean_ndvi(start_date, end_date, countyBoundary, winterWheatFC):
     return mean_ndvi
 
 
+# transforming the raster from cropland mask to a vectore mask to use it with google earth engine
 def ras_to_vec(state, county, start_date, end_date):
 
     try:

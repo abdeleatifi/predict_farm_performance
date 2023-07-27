@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
-
+# get data about the crop prices in the year of harvest
 def get_price_data(df):
 
     df = df.copy()

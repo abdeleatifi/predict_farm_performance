@@ -3,6 +3,8 @@ import ee
 # Initialize Earth Engine
 ee.Initialize()
 
+
+# simple function calculates the size of the geometry variable(land)
 def get_land_area(geometry):
 
     geometry = geometry.geometry()

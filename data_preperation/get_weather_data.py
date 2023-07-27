@@ -5,6 +5,8 @@ from get_ndvi_data import ras_to_vec
 import datetime
 from meteostat import Daily, Stations
 
+
+# get weather data using ERA5_LAND daily temperature
 def get_sat_weather_data(df):
 
     df = df.copy()
@@ -49,7 +51,7 @@ def get_sat_weather_data(df):
 
     return df
 
-
+# get data using meteostat API
 def get_weather_data(df):
 
     df = df.copy()

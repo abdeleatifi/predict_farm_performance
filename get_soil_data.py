@@ -4,6 +4,7 @@
 # https://developers.google.com/earth-engine/datasets/catalog/OpenLandMap_SOL_SOL_WATERCONTENT-33KPA_USDA-4B1C_M_v01
 import ee
 
+# get soil data for a new datapoint
 def get_soil_data(crop_geometry):
 
 

@@ -8,6 +8,8 @@ import ee
 from get_ndvi_data import ras_to_vec
 import datetime
 
+
+# collect soil caracteristics using the OpenLandMap dataset
 def get_soil_data(df):
 
 

@@ -7,6 +7,8 @@ from pcse.db import NASAPowerWeatherDataProvider
 from pcse.fileinput import YAMLCropDataProvider
 from pcse.util import WOFOST72SiteDataProvider, DummySoilDataProvider
 
+
+# using the pcse model you can estimate the production of the crop
 def get_prod(agrom):
 
     agro_yaml = """

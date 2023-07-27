@@ -81,7 +81,7 @@ def get_price():
     return wheat_prica
 
 
-def get_market_value(agrom):
-    market_value = ((get_prod(agrom).iloc[0,2] * get_land_area(geometry)) - loss) * get_price()
-    return market_value
+def yearly_income(agrom):
+    yearly_income = get_prod(agrom).iloc[0,2] * get_price()
+    return yearly_income
 

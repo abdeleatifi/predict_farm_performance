@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
+
+# get the latest price of the crop type (winter wheat)
 def get_latest_price():
 
     # Make a GET request to the webpage
@@ -25,6 +27,7 @@ def get_latest_price():
     return wheat_prica
 
 
+# get the average price of a particular year 
 def get_year_price(year):
     
     # Make a GET request to the webpage
